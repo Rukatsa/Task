@@ -1,4 +1,5 @@
 <?php
-function hello(): void {
-    echo "Hello Function";
+function hello(string $text ): void {
+    echo $text;
 }
+hello("param3t3r");
