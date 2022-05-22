@@ -1,14 +1,22 @@
 <?php
-function sum(float $num1,float $num2):float{
-    return $num1+$num2;
+function sum(float ...$nums):float{
+    $add=0;
+    foreach ($nums as $num) {
+        $add=$num+$add;
+    }
+    return $add;
 }
-function dif(float $num1,float $num2):float{
-    return $num1-$num2;
+function dif(float ...$nums):float{
+    $dif=0;
+    foreach($nums as $num){
+        $dif=$num-$dif;   
 }
-function pro(float $num1,float $num2):float{
+return $dif;
+}
+function pro(float ...$nums):float{
     return $num1*$num2;
 }
-function quo(float $num1,float $num2):float{
+function quo(float ...$nums):float{
     return $num1/$num2;
 }
 echo "The sum =".sum(10,2)."<br>";
