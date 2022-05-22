@@ -14,10 +14,18 @@ function dif(float ...$nums):float{
 return $dif;
 }
 function pro(float ...$nums):float{
-    return $num1*$num2;
+    $pro=1;
+    foreach ($nums as $num) {
+        $pro=$num*$pro;
+    }
+    return $pro;
 }
 function quo(float ...$nums):float{
-    return $num1/$num2;
+    $quo=1;
+    foreach($nums as $num){
+        $quo=$num/$quo;
+    }
+    return $quo;
 }
 echo "The sum =".sum(10,2)."<br>";
 echo "The different =".dif(10,2)."<br>";
