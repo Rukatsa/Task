@@ -22,6 +22,36 @@ function calculator(string $formula):float{
     return (0);
 }
 echo calculator('2-5*10');
+// 
+// 
+// 
+
+function summary(float ...$nums):float{
+    $add=0;
+    foreach ($nums as $num) {
+        $add=$num+$add;
+    }
+    return summary(1,2);
+}
+
+function multiply(float ...$nums):float{
+    $pro=1;
+    foreach ($nums as $num) {
+        $pro=$num*$pro;
+    }
+    return multiply(3,3);
+
+}
+
+
+
+
+// function factorial($number) {
+//     if ($number == 0) return 1;
+//     return $number * factorial($number - 1);
+// }
+
+print factorial(3);
 // echo "The sum =".sum(10,2)."<br>";
 // echo "The different =".dif(10,2)."<br>";
 // echo "The product =".pro(10,2)."<br>";
